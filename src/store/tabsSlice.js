@@ -16,9 +16,9 @@ const tabsSlice = createSlice({
       text: 'A',
     },
     price: 0,
-    minPrice: 100,
+    minPrice: 50,
     maxPrice: 250000,
-    maxNumbers: 13,
+    maxNumbers: 15,
   },
   reducers: {
     selectTab: (state, { payload }) => {
@@ -40,8 +40,7 @@ const tabsSlice = createSlice({
       let tabNumbers = state.tabs[state.activeTab.id].numbers;
       let tabSelectedNumbers = state.tabs[state.activeTab.id].selectedNumbers;
 
-      //Preventing next step when limit is break
-      if (tabSelectedNumbers.length >= state.maxNumbers) return;
+
 
       tabNumbers = tabNumbers
         .map(({ id, text, isActive }) => {
@@ -55,6 +54,10 @@ const tabsSlice = createSlice({
                   number !== payload
                 ));
             } else {
+
+              //Preventing next step when limit is break
+              if (tabSelectedNumbers.length >= state.maxNumbers) return newItem;
+
               newItem.isActive = true;
               tabSelectedNumbers = [
                 ...tabSelectedNumbers, {
