@@ -1,0 +1,10 @@
+body {
+  max-width: 1380px;
+  margin: 0 auto;
+  height: 100vh;
+}
+.app__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}

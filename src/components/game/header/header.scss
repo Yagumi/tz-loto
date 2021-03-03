@@ -1,0 +1,14 @@
+.header {
+  height: 15vh;
+
+  &__random {
+    border: 1px solid rgba(0,0,0,.5);
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__random:hover,
+  &__random:active {
+    color: #c90000;
+  }
+}

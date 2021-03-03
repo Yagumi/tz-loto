@@ -1,0 +1,48 @@
+.tab {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #dddcda;
+
+  &:last-of-type {
+    border-bottom: 1px solid #dddcda;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+
+  }
+
+  &__item {
+    margin-left: 3%;
+    
+  }
+
+  &__btn {
+    width: 3vw;
+    height: 3vw;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    background-color: #dddcda;
+    color: #fff;
+  }
+
+  &__btn:active {
+    background-color: #15b453;
+    color: #fff;
+  }
+
+  &__btn--active {
+    background-color: #15b453;
+    color: #fff;
+  }
+}
+
